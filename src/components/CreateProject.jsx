@@ -75,7 +75,7 @@ const CreateProject = () => {
               <img
                 src={
                   imageURL ||
-                  'https://media.wired.com/photos/5926e64caf95806129f50fde/master/pass/AnkiHP.jpg'
+                  'https://cdn-icons-png.flaticon.com/512/7500/7500362.png'
                 }
                 alt="project title"
                 className="h-full w-full object-cover cursor-pointer"
@@ -172,9 +172,9 @@ const CreateProject = () => {
 
           <button
             type="submit"
-            className="inline-block px-6 py-2.5 bg-green-600
+            className="inline-block px-6 py-2.5 bg-teal-600
             text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-green-700 mt-5"
+            rounded-full shadow-md hover:bg-teal-700 mt-5"
           >
             Submit Project
           </button>

@@ -1,14 +1,8 @@
 # How to Build an Awesome Web3 Crowd-Funding Platform with React, Solidity, and CometChat
 
-Read the full tutorial here: [**>> How to Build an Awesome Web3 Crowd-Funding Platform with React, Solidity, and CometChat**](https://daltonic.github.io)
+Read the full tutorial here: [**>> How to Build an Awesome Web3 Crowd-Funding Platform with React, Solidity, and CometChat**]
 
 This example shows How to Build an Awesome Web3 Crowd-Funding Platform with React, Solidity, and CometChat:
-
-![Genesis Project](./screenshots/0.gif)
-<center><figcaption>Genesis Project</figcaption></center>
-
-![Genesis Project](./screenshots/1.gif)
-<center><figcaption>Back Project</figcaption></center>
 
 ## Technology
 
@@ -32,7 +26,6 @@ To run the demo follow these steps:
     ```sh
 
     # Make sure you have the above prerequisites installed already!
-    git clone https://github.com/Daltonic/genesis PROJECT_NAME
     cd PROJECT_NAME # Navigate to the new folder.
     yarn install # Installs all the dependencies.
     ```
@@ -47,13 +40,10 @@ To run the demo follow these steps:
 3. Run the app using `yarn start`
 <br/>
 
-If your confuse about the installation, check out this **TUTORIAL** to see how you should run it.
-
-Questions about running the demo? [Open an issue](https://github.com/Daltonic/genesis/issues). We're here to help ✌️
 
 ## Useful links
 
-- 🏠 [Website](https://daltonic.github.io/)
+- 🏠 [Website]()
 - ⚽ [Metamask](https://metamask.io/)
 - 🚀 [Remix Editor](https://remix.ethereum.org/)
 - 💡 [Hardhat](https://hardhat.org/)
@@ -62,5 +52,50 @@ Questions about running the demo? [Open an issue](https://github.com/Daltonic/ge
 - 🐻 [Solidity](https://soliditylang.org/)
 - 👀 [EthersJs](https://docs.ethers.io/v5/)
 - 🎅 [Faucet](https://faucets.chain.link/rinkeby)
-- 🤖 [CometChat](https://cometchat.com/)
-- ✨ [Live Demo](https://genesis-45443.web.app/)
+- ✨ [Live Demo]()
+
+require('@nomiclabs/hardhat-waffle')
+require('dotenv').config()
+
+module.exports = {
+  defaultNetwork: 'localhost',
+  networks: {
+    localhost: {
+      url: 'http://127.0.0.1:8545',
+    },
+    goerli: {
+      url: process.env.ENDPOINT_URL,
+      accounts: [process.env.DEPLOYER_KEY]
+    }
+  },
+  solidity: {
+    version: '0.8.11',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+  paths: {
+    sources: './src/contracts',
+    artifacts: './src/abis',
+  },
+  mocha: {
+    timeout: 40000,
+  },
+}
+
+
+## Running the Project
+
+To run the Project follow these Commands in ubuntu:
+1) YARN INSTALL - <!--# install dependencies.
+2) YARN START - <!--# To run project.
+3) install hardhat 
+<!-- 4) node deploy.js -->
+4) npx hardhat node <!--# to run metamask locally
+5) yarn hardhat run scripts/deploy.js --network localhost  <!--# run project on localhost network in metamask ,metmask contain localhost,Gorili , seoplia network
+<!-- 5)curl localhost:8545 -->
+6) kill $(lsof -t -i:8545) <!-- kill 8545 process
+7) 

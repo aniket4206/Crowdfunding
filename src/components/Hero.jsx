@@ -4,26 +4,26 @@ const Hero = () => {
 
   return (
     <div className="text-center bg-white text-gray-800 py-24 px-6">
-      <h1
-        className="text-5xl md:text-6xl xl:text-7xl font-bold
+      <h3
+        className="text-5xl md:text-5xl xl:text-5xl font-bold
       tracking-tight mb-12"
       >
-        <span className="capitalize">Bring creative projects to life on</span>
+        <span className="capitalize">Lend a hand with your donation</span>
         <br />
-        <span className="uppercase text-green-600">genesis.</span>
-      </h1>
+        <span className="text-teal-700">BetterFund.</span>
+      </h3>
       <div className="flex justify-center items-center space-x-2">
         <button
           type="button"
-          className="inline-block px-6 py-2.5 bg-green-600
+          className="inline-block px-6 py-2.5 bg-teal-600
         text-white font-medium text-xs leading-tight uppercase
-        rounded-full shadow-md hover:bg-green-700"
+        rounded-full shadow-md hover:bg-teal-700"
           onClick={() => setGlobalState('createModal', 'scale-100')}
         >
           Add Project
         </button>
 
-        <button
+        {/* <button
           type="button"
           className="inline-block px-6 py-2.5 border border-green-600
         font-medium text-xs leading-tight uppercase text-green-600
@@ -31,7 +31,7 @@ const Hero = () => {
         hover:text-white"
         >
           Back Projects
-        </button>
+        </button> */}
       </div>
 
       <div className="flex justify-center items-center mt-10">
@@ -40,7 +40,7 @@ const Hero = () => {
           h-20 border shadow-md w-full"
         >
           <span
-            className="text-lg font-bold text-green-900
+            className="text-lg font-bold text-teal-900
             leading-5"
           >
             {stats?.totalProjects || 0}
@@ -52,19 +52,19 @@ const Hero = () => {
           h-20 border shadow-md w-full"
         >
           <span
-            className="text-lg font-bold text-green-900
+            className="text-lg font-bold text-teal-900
             leading-5"
           >
             {stats?.totalBacking || 0}
           </span>
-          <span>Backings</span>
+          <span>Contributor</span>
         </div>
         <div
           className="flex flex-col justify-center items-center
           h-20 border shadow-md w-full"
         >
           <span
-            className="text-lg font-bold text-green-900
+            className="text-lg font-bold text-teal-900
             leading-5"
           >
             {stats?.totalDonations || 0} ETH

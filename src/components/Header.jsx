@@ -16,17 +16,17 @@ const Header = () => {
         className="flex justify-start items-center
       text-xl text-black space-x-1"
       >
-        <span>Genesis</span>
-        <TbBusinessplan />
+        <span>BetterFund</span>
+        {/* <TbBusinessplan /> */}
       </Link>
 
       <div className="flex space-x-2 justify-center">
         {connectedAccount ? (
           <button
             type="button"
-            className="inline-block px-6 py-2.5 bg-green-600
+            className="inline-block px-6 py-2.5 bg-teal-600
             text-white font-medium text-xs leading-tight uppercase
-            rounded-full shadow-md hover:bg-green-700"
+            rounded-full shadow-md hover:bg-teal-700"
           >
             {truncate(connectedAccount, 4, 4, 11)}
           </button>
@@ -37,8 +37,7 @@ const Header = () => {
             text-white font-medium text-xs leading-tight uppercase
             rounded-full shadow-md hover:bg-green-700"
             onClick={connectWallet}
-          >
-            Connect Wallet
+          >Connect Wallet
           </button>
         )}
       </div>

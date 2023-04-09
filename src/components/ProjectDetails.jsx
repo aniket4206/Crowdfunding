@@ -96,12 +96,12 @@ const ProjectDetails = ({ project }) => {
                 {project?.status == 0 ? (
                   <button
                     type="button"
-                    className="inline-block px-6 py-2.5 bg-green-600
+                    className="inline-block px-6 py-2.5 bg-teal-600
               text-white font-medium text-xs leading-tight uppercase
-              rounded-full shadow-md hover:bg-green-700"
+              rounded-full shadow-md hover:bg-teal-700"
                     onClick={() => setGlobalState('backModal', 'scale-100')}
                   >
-                    Back Project
+                    Donate $
                   </button>
                 ) : null}
 
@@ -121,9 +121,9 @@ const ProjectDetails = ({ project }) => {
                       <>
                         <button
                           type="button"
-                          className="inline-block px-6 py-2.5 bg-gray-600
+                          className="inline-block px-6 py-2.5 bg-green-600
                           text-white font-medium text-xs leading-tight uppercase
-                          rounded-full shadow-md hover:bg-gray-700"
+                          rounded-full shadow-md hover:bg-green-700"
                           onClick={() =>
                             setGlobalState('updateModal', 'scale-100')
                           }
