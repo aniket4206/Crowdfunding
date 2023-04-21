@@ -13,7 +13,7 @@ const BackProject = ({ project }) => {
     if (!amount) return
 
     await backProject(project?.id, amount)
-    toast.success('Project backed successfully, will reflect in 30sec.')
+    toast.success('ETH successfully donated.')
     setGlobalState('backModal', 'scale-0')
   }
 
@@ -77,7 +77,7 @@ const BackProject = ({ project }) => {
             text-white font-medium text-md leading-tight
             rounded-full shadow-md hover:bg-teal-700 mt-5"
           >
-            Back Project
+            Donate
           </button>
         </form>
       </div>

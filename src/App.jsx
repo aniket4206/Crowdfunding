@@ -5,6 +5,7 @@ import Home from './views/Home'
 import Project from './views/Project'
 import { isWallectConnected } from './services/blockchain'
 import { ToastContainer } from 'react-toastify'
+import Dashboard from './views/Dashboard'
 
 const App = () => {
   const [loaded, setLoaded] = useState(false)
@@ -22,6 +23,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/:id" element={<Project />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/chatroom" component={Chat} /> */}
         </Routes>
       ) : null}
 

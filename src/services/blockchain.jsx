@@ -75,6 +75,24 @@ const createProject = async ({
   }
 }
 
+const createChatbot = async ({
+  title,
+  description,
+  imageURL,
+  cost,
+  expiresAt,
+}) => {
+  try {
+    if (!ethereum) return alert('Please install Metamask')
+
+    const contract = await getEtheriumContract()
+    cost = ethers.utils.parseEther(cost)
+    await contract.createProject(title, description, imageURL, cost, expiresAt)
+  } catch (error) {
+    reportError(error)
+  }
+}
+
 const updateProject = async ({
   id,
   title,
@@ -224,6 +242,7 @@ export {
   connectWallet,
   isWallectConnected,
   createProject,
+  createChatbot,
   updateProject,
   deleteProject,
   loadProjects,
